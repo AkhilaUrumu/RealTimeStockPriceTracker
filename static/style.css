@@ -1,0 +1,86 @@
+/* Grid container for stock tickers */
+#tickers-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align items */
+    gap: 20px; /* Add space between items */
+}
+
+/* Individual stock box styling */
+.stock-box {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #333;
+    padding: 10px;
+    color: black;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    transition: background-color 0.5s, color 0.5s, transform 0.3s;
+}
+
+/* Hover effect for better user experience */
+.stock-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Text color indicators */
+.dark-red {
+    color: #880000;
+}
+
+.red {
+    color: #FF0000;
+}
+
+.gray {
+    color: #808080;
+}
+
+.green {
+    color: #00BB00;
+}
+
+.dark-green {
+    color: #006600;
+}
+
+/* Flashing background colors for changes */
+.red-flash {
+    background-color: #ffcccc; /* Light red */
+}
+
+.green-flash {
+    background-color: #ccffcc; /* Light green */
+}
+
+.gray-flash {
+    background-color: #cccccc; /* Light gray */
+}
+
+/* Apply transition globally for smooth effects */
+.stock-box.red-flash,
+.stock-box.green-flash,
+.stock-box.gray-flash {
+    transition: background-color 1s;
+}
+
+/* Button styles */
+button.remove-btn {
+    margin-top: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.remove-btn:hover {
+    background-color: #555;
+}
